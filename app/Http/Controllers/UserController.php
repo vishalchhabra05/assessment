@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function store(Request $request)
     {
-        /*$validated = $request->validate([
+        $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
             'phone' => [
@@ -21,16 +21,16 @@ class UserController extends Controller
             'role_id' => 'required|exists:roles,id',
             'description' => 'nullable|string',
             'profile_image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-        ]);*/
-
-        $validated = $request->validate([
-            'name' => 'nullable',
-            'email' => 'nullable',
-            'phone' =>'nullable',
-            'role_id' => 'nullable',
-            'description' => 'nullable',
-            'profile_image' => 'nullable',
         ]);
+
+        //$validated = $request->validate([
+         //   'name' => 'nullable',
+         //   'email' => 'nullable',
+         //   'phone' =>'nullable',
+         //   'role_id' => 'nullable',
+         //   'description' => 'nullable',
+          //  'profile_image' => 'nullable',
+      //  ]);
 
        	
 
